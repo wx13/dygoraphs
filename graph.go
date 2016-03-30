@@ -11,6 +11,7 @@ type Graph struct {
 	Columns []string
 	Data    [][]float64
 	Style   string
+	Options string
 }
 
 func NewGraph() *Graph {
@@ -19,6 +20,7 @@ func NewGraph() *Graph {
 	g.Columns = []string{}
 	g.Data = [][]float64{}
 	g.Style = ""
+	g.Options = "{}"
 	return &g
 }
 
@@ -55,7 +57,8 @@ func (g *Graph) Plot() string {
 	html += "<script>\n"
 	html += "g = new Dygraph(\n"
 	html += fmt.Sprintf(`  document.getElementById("%s"),`, g.Id) + "\n"
-	html += csv
+	html += csv + ",\n"
+	html += g.Options
 	html += ");\n"
 	html += "</script>\n"
 	return html
