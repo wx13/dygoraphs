@@ -19,6 +19,7 @@ func main() {
 		[]float64{151, 149, 147, 150, 155, 160},
 	}
 	g.Add(cols, data)
+	g.Style = "width:600px; height:400px;"
 	fmt.Println(g.Plot())
 
 	fmt.Println("</body></html>")

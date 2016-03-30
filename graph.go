@@ -10,6 +10,7 @@ type Graph struct {
 	Id      string
 	Columns []string
 	Data    [][]float64
+	Style   string
 }
 
 func NewGraph() *Graph {
@@ -17,6 +18,7 @@ func NewGraph() *Graph {
 	g.Id = fmt.Sprintf("%d", rand.Int())
 	g.Columns = []string{}
 	g.Data = [][]float64{}
+	g.Style = ""
 	return &g
 }
 
@@ -44,7 +46,7 @@ func (g *Graph) CSVdata() string {
 }
 
 func (g *Graph) Div() string {
-	return fmt.Sprintf(`<div id="%s"></div>`, g.Id)
+	return fmt.Sprintf(`<div id="%s" style="%s"></div>`, g.Id, g.Style)
 }
 
 func (g *Graph) Plot() string {
