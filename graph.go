@@ -43,26 +43,8 @@ func (g *Graph) DumpStyle() string {
 		s := fmt.Sprintf("%s:%s", name, val)
 		strs = append(strs, s)
 	}
-	return strings.Join(strs, "; ")
+	return strings.Join(strs, "; ") + ";"
 }
-
-//func (g *Graph) CSVdata() string {
-//	csv := `"` + strings.Join(g.Columns, ",") + `\n"` + " +\n"
-//	for row := range g.Data[0] {
-//		csv += `"`
-//		for col := range g.Data {
-//			csv += fmt.Sprintf("%f", g.Data[col][row])
-//			if col < len(g.Data)-1 {
-//				csv += ","
-//			}
-//		}
-//		csv += `\n"`
-//		if row < len(g.Data[0])-1 {
-//			csv += " +\n"
-//		}
-//	}
-//	return csv
-//}
 
 func (g *Graph) Div() string {
 	return fmt.Sprintf(`<div id="%s" style="%s"></div>`, g.Id, g.DumpStyle())
