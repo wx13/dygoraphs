@@ -1,5 +1,6 @@
 package dygoraphs
 
+// Script contains the dygraphs.js source code.
 const Script = `
 <script>
 /*! @license Copyright 2014 Dan Vanderkam (danvdk@gmail.com) MIT-licensed (http://opensource.org/licenses/MIT) */
@@ -10,4 +11,3 @@ p.appendChild(r),this.xlabels_.push(r)}}h.strokeStyle=i.getOptionForAxis("axisLi
 //# sourceMappingURL=dygraph-combined.js.map
 </script>
 `
-

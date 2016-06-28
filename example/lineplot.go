@@ -5,7 +5,7 @@ import (
 	"github.com/wx13/dygoraphs"
 )
 
-func LinePlot() {
+func linePlot() {
 
 	fmt.Println("<h2>Line Plot</h2>")
 
@@ -23,7 +23,7 @@ func LinePlot() {
 
 }
 
-func SymErrBars() {
+func symErrBars() {
 
 	fmt.Println("<h2>Symmetric Error Bars</h2>")
 
@@ -42,7 +42,7 @@ func SymErrBars() {
 
 }
 
-func AsymErrBars() {
+func asymErrBars() {
 
 	fmt.Println("<h2>Asymmetric Error Bars</h2>")
 
@@ -61,7 +61,7 @@ func AsymErrBars() {
 
 }
 
-func ErrBarTrans() {
+func errBarTrans() {
 
 	fmt.Println("<h2>Symmetric Error Bars</h2>")
 
@@ -89,10 +89,10 @@ func main() {
 	fmt.Println(dygoraphs.Script)
 	fmt.Println("</head><body>")
 
-	LinePlot()
-	SymErrBars()
-	AsymErrBars()
-	ErrBarTrans()
+	linePlot()
+	symErrBars()
+	asymErrBars()
+	errBarTrans()
 
 	fmt.Println("</body></html>")
 
